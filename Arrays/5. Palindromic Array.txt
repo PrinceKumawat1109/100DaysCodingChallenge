@@ -1,0 +1,24 @@
+class Solution {
+public:
+    int PalinArray(int a[], int n)
+    {
+    	// code here
+    	int k,r,rev=0;
+    	for(int i=0;i<n;i++){
+    	    k=a[i];
+    	    while(k!=0){
+    	        r=k%10;
+    	        rev=(rev*10)+r;
+    	        k=k/10;
+    	    }
+    	    if(rev==a[i]){
+    	        rev=0;
+    	        continue;
+    	    }
+    	    else{
+    	        return 0;
+    	    }
+    	}
+    	return 1;
+    }
+};

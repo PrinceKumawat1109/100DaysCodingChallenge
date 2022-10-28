@@ -1,0 +1,14 @@
+class Solution{
+    public:
+    string longest(string names[], int n)
+    {
+        string mx=names[0];
+        for(int i=1;i<n;i++){
+            if(names[i].length()>mx.length()){
+                mx=names[i];
+            }
+        }
+        return mx;
+        
+    }
+};
