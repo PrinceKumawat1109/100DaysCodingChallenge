@@ -1,0 +1,14 @@
+
+class Compute
+{
+    String average(int A[], int N)
+    {
+        int s=0;
+        for(int i=0;i<N;i++){
+            s+=A[i];
+        }
+        float a=s/N;
+        String val = String.format("%.2f", a);
+        return val;
+    }
+}

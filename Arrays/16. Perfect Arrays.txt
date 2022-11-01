@@ -1,0 +1,17 @@
+class Solution{
+    public:
+    bool IsPerfect(int a[],int n)
+    {
+        // Complete the function
+        int s=0;
+        int e=n-1;
+        for(int i=0;i<n;i++){
+            if(a[s]==a[e]){
+                s++;
+                e--;
+            }
+            else return 0;
+        }
+        return 1;
+    }
+};
