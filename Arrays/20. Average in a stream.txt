@@ -1,0 +1,14 @@
+class Solution{
+public:	
+	vector<float> streamAvg(int arr[], int n) {
+	    // code here
+	    vector<float>v;
+	    float s=0;float c=1;
+        for(int i=0;i<n;i++){
+            s+=arr[i];
+            v.push_back(s/c);
+            c++;
+        }	    
+        return v;
+	}
+};

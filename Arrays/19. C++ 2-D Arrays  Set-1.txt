@@ -1,0 +1,13 @@
+vector<vector<int>> transpose(int a[][M], int n)
+{
+    // Code here
+    vector<vector<int>> v;
+    for(int i=0;i<n;i++){
+        vector<int> ar;
+        for(int j=0;j<n;j++){
+            ar.push_back(a[j][i]);
+        }
+        v.push_back(ar);
+    }
+    return v;
+}
