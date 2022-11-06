@@ -1,0 +1,21 @@
+class Solution
+{
+    public:
+        string modify (string s)
+        {
+            //code here.
+            string str="";
+            for(int i=0;i<s.size();i++){
+                if(s[i]=='a' ||s[i]=='i' ||s[i]=='e' ||s[i]=='o' ||s[i]=='u'){
+                    str+=s[i];
+                }
+            }
+            int n=str.size()-1;
+            for(int i=0;i<s.size();i++){
+                if(s[i]=='a' ||s[i]=='i' ||s[i]=='e' ||s[i]=='o' ||s[i]=='u'){
+                    s[i]=str[n--];
+                }
+            }
+            return s;
+        }
+};
