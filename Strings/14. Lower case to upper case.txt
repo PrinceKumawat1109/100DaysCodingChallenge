@@ -1,0 +1,7 @@
+string to_upper(string str){
+    
+    for(int i=0;i<str.size();i++){
+        str[i]-=32;
+    }
+    return str;
+}

@@ -1,0 +1,9 @@
+pair<long long, long long> getMinMax(long long a[], int n) {
+    
+    long long mn=a[0],mx=a[0];
+    for(int i=1;i<n;i++){
+        mn=min(mn,a[i]);
+        mx=max(mx,a[i]);
+    }
+    return {mn,mx};
+}
