@@ -1,0 +1,17 @@
+class Solution
+{
+    public:
+    struct Node* reverseList(struct Node *head)
+    {
+        Node *prev=NULL;
+       Node *current=head;  Node *forward=head;
+      while(forward)
+      {
+          forward=forward->next;
+          current->next=prev;
+          prev=current;
+          current=forward;
+      }
+      head=prev;
+    }
+};
