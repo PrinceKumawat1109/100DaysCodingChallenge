@@ -1,0 +1,10 @@
+class Solution{
+    public:
+    void convertToWave(int n, vector<int>& arr){
+        for(int i=0;i<n;i++){
+            if(i%2!=0){
+                swap(arr[i],arr[i-1]);
+            }
+        }
+    }
+};
