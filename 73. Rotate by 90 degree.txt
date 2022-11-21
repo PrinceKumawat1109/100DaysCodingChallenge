@@ -1,0 +1,25 @@
+class Solution
+{   
+    public:
+    //Function to rotate matrix anticlockwise by 90 degrees.
+    void rotateby90(vector<vector<int> >& matrix, int n) 
+    { 
+        // code here 
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<matrix[i].size();j++)
+            {
+                swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+        //exchanging rows now
+        int l=0,r=n-1;
+        while(l<r)
+        {
+            for(int i=0;i<matrix[0].size();i++)
+                swap(matrix[l][i],matrix[r][i]);
+            l++;
+            r--;
+        }
+    } 
+};
