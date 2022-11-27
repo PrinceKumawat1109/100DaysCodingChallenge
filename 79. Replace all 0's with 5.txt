@@ -1,0 +1,21 @@
+int convertFive(int n) {
+    // Your code here
+    int r=0,t=0;
+    while(n!=0){
+        int k=n%10;
+        n=n/10;
+        if(k==0){
+            k=5;
+            r=r*10+k;
+        }
+        else{
+            r=r*10+k;
+        }
+    }
+    while(r!=0){
+        int p=r%10;
+        r=r/10;
+        t=t*10+p;
+        }
+    return t;
+}
