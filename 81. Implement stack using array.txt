@@ -1,0 +1,12 @@
+void MyStack :: push(int x)
+{
+    // Your Code
+    top++;
+    arr[top]=x;
+}
+int MyStack :: pop()
+{
+    // Your Code
+    if(top==-1) return -1;
+    else return arr[top--];
+}
