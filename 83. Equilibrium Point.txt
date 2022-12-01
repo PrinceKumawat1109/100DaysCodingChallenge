@@ -1,0 +1,17 @@
+class Solution {
+    public static int equilibriumPoint(long arr[], int n) {
+        if(n<=1)return 1;
+        int s=0;
+        int t=0;
+        for(int i=0;i<n;i++){
+            t+=arr[i];
+        }
+        for(int i=1;i<n;i++){
+            s+=arr[i-1];
+            if(t-s-arr[i]==s){
+                return i+1;
+            }
+        }
+        return -1;
+    }
+}
