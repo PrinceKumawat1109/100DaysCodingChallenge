@@ -1,0 +1,24 @@
+class Solution{
+  public:
+    vector<long long int> productExceptSelf(vector<long long int>& nums, int n) {
+       long long prd=1;
+       vector<long long int> ans;
+       int k,j;
+       for(int i=0;i<n;i++)
+       {
+        prd=1,k=0,j=n-1;
+        while(k<i)
+        {
+            prd*=nums[k];
+            k++;
+        }
+        while(j>i)
+        {
+            prd*=nums[j];
+            j--;
+        }
+        ans.push_back(prd);
+       }
+       return ans;
+    }
+};
