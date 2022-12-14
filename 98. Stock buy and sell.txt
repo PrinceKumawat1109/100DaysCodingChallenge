@@ -1,0 +1,25 @@
+class Solution{
+public:
+    vector<vector<int>> stockBuySell(vector<int> a, int n){
+    int prev_idx=0;
+     int mx=a[0];
+     vector<vector<int>>ans;
+     int cnt=-1;
+     vector<int>temp;
+     for(int i=1;i<n;i++){
+     if(a[i]>mx){
+     mx=a[i];
+     cnt=i;
+     }
+     else{
+         if(prev_idx!=i-1)
+         ans.push_back({prev_idx,i-1});
+     prev_idx=i;
+     mx=a[i];
+     }
+     }
+     if(cnt==n-1)
+     ans.push_back({prev_idx,cnt});
+     return ans;
+    }
+};
