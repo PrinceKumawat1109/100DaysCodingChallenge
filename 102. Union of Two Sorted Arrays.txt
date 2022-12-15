@@ -1,0 +1,32 @@
+vector<int> findUnion(int arr1[], int arr2[], int n, int m)
+{
+       int i = 0;
+       int j = 0;
+          vector<int> Union;
+        while(i < n && j < m) {
+            if(arr1[i] <= arr2[j]){ //1st 2nd case i <= j
+                if(Union.size() == 0 || Union.back() != arr1[i]){
+                    Union.push_back(arr1[i]);
+                }
+                     i++;
+            } else {  // 3rd Case j > i
+                if(Union.size() == 0 || Union.back() != arr2[j] ){
+                    Union.push_back(arr2[j]);
+                }
+                    j++;
+            }
+        }
+        while( i < n) {  // If Elements left In arr1 Check if Last Element Is Not Equa
+            if( Union.back() != arr1[i]){
+                Union.push_back(arr1[i]);
+            }
+               i++;
+        }
+        while( j < m){   // If Elements left In arr2 Check if Last Element Is Not Equal
+            if( Union.back() != arr2[j]) {
+                Union.push_back(arr2[j]);
+            }
+               j++;
+        }
+            return Union;
+    }

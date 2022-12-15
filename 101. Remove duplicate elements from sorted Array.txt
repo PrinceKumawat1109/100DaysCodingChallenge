@@ -1,0 +1,13 @@
+class Solution{
+public:
+    int remove_duplicate(int a[],int n){
+        // code here
+        int c=0;
+        for(int i=0;i<n;i++){
+            if(a[c]!=a[i]){
+                a[++c]=a[i];
+            }
+        }
+        return c+1;
+    }
+};
