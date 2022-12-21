@@ -1,0 +1,91 @@
+#include bitsstdc++.h
+using namespace std;
+vectorint nge(vectorint& v){
+	int n = v.size();
+	vectorint ans(n, n);
+	stackint wa;  waiting area
+	for(int i=0; in; i++){
+		 answer as many elem in wa as possible
+		while(!wa.empty() && v[i]  v[wa.top()]){
+			ans[wa.top()] = i;
+			wa.pop();
+		}		
+		 wait urself		
+		wa.push(i);
+	}	
+	return ans;
+}
+vectorint pge(vectorint& v){
+	int n = v.size();
+	vectorint ans(n, -1);
+	stackint wa;  waiting area
+	for(int i=n-1; i=0; i--){
+		 answer as many elem in wa as possible
+		while(!wa.empty() && v[i]  v[wa.top()]){
+			ans[wa.top()] = i;
+			wa.pop();
+		}		
+		 wait urself		
+		wa.push(i);
+	}	
+	return ans;
+}
+vectorint nse(vectorint& v){
+	int n = v.size();
+	vectorint ans(n, n);
+	stackint wa;  waiting area
+	for(int i=0; in; i++){
+		 answer as many elem in wa as possible
+		while(!wa.empty() && v[i]  v[wa.top()]){
+			ans[wa.top()] = i;
+			wa.pop();
+		}		
+		 wait urself		
+		wa.push(i);
+	}	
+	return ans;
+}
+vectorint pse(vectorint& v){
+	int n = v.size();
+	vectorint ans(n, -1);
+	stackint wa;  waiting area
+	for(int i=n-1; i=0; i--){
+		 answer as many elem in wa as possible
+		while(!wa.empty() && v[i]  v[wa.top()]){
+			ans[wa.top()] = i;
+			wa.pop();
+		}		
+		 wait urself		
+		wa.push(i);
+	}	
+	return ans;
+}
+int largestArea(vectorint &v){
+    auto nsi=nse(v);
+    auto psi=pse(v);
+    int n=v.size();
+    int ans,mx=0;
+    for(int i=0;in;i++){
+        ans=v[i](nsi[i]-psi[i]-1);
+        mx=max(mx,ans);
+    }
+    return mx;
+}
+int main(){
+	int n; cinn; vectorint v(n);
+	for(int i=0; in; i++) cinv[i];
+	auto a = nge(v);
+	for(auto x  a) cout  x   ;
+	coutn;
+	auto b = pge(v);
+	for(auto x  b) cout  x   ;	
+	coutn;
+	auto c = nse(v);
+	for(auto x  c) cout  x   ;	
+	coutn;
+	auto d = pse(v);
+	for(auto x  d) cout  x   ;
+	coutn;
+	coutlargestArea(v) ;
+	return 0;
+}
