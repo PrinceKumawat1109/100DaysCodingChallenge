@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+   // write your code here
+   int t;
+   cin>>t;
+   for(int k=1;k<=t;k++){
+       cout<<"Case "<<k<<":\n";
+       stack<int>s,mtn;
+       int n; cin>>n;
+       char ch;
+       int a;
+       for(int i=0;i<n;i++){
+            cin>>ch;
+            if(ch=='A'){
+                cin>>a;
+                s.push(a);
+                if(mtn.empty())mtn.push(a);
+                else mtn.push(max(a,mtn.top()));
+            }
+            if(ch=='Q'){
+                if(mtn.empty())
+                cout<<"Empty\n";
+                else
+                cout<<mtn.top()<<"\n";
+            }
+            if(ch=='R'){
+                if(!s.empty()){
+                    s.pop();
+                    mtn.pop();
+                }
+            }
+        }
+   }
+    return 0;
+}
