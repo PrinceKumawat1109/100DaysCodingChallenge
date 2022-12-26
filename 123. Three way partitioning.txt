@@ -1,0 +1,21 @@
+class Solution{   
+public:
+    void threeWayPartition(vector<int>& array,int a, int b)
+    {
+        int l=0;
+        int h=array.size()-1;
+        int mid=0;
+        while(mid<=h){
+        if(array[mid]<a){
+            swap(array[l],array[mid]);
+            l++;
+            mid++;
+        }else if(a<=array[mid] && array[mid]<=b){
+            mid++;
+        }else{
+            swap(array[mid],array[h]);
+            h--;
+        }
+    }
+    }
+};
