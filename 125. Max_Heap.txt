@@ -1,0 +1,21 @@
+#includebitsstdc++.h
+using namespace std;
+
+void maxHeapifyShiftDown(int v[], int n, int idx){
+     TODO Your Code Here
+    int curr=idx;
+    while(true){
+        int mxi=curr;
+        int lci=(2curr)+1;
+        int rci=(2curr)+2;
+        if(lcin && v[lci]v[mxi]){
+            mxi=lci;
+        }
+        if(rcin && v[rci]v[mxi]){
+            mxi=rci;
+        }
+        if(curr==mxi)break;
+        swap(v[curr],v[mxi]);
+        curr=mxi;
+    }
+}
