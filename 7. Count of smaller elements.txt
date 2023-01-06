@@ -8,3 +8,4 @@ int countOfElements(int arr[], int n, int x)
     }
     return c;
 }
+
